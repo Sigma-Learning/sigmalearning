@@ -99,27 +99,88 @@ body {
 /* Responsive Navigation */
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
     }
 
     .nav-links {
         display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 70px;
         left: 0;
         right: 0;
-        background-color: white;
-        padding: 1rem;
+        background-color: var(--white);
+        padding: 0.5rem 1rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .nav-links.active {
+        display: block;
+    }
+
     .nav-links li {
-        margin: 0.5rem 0;
+        margin: 0;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .donate-btn {
+        display: inline-block;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    /* Adjust hero section for mobile */
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Adjust program cards for mobile */
+    .program-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .program-card {
+        margin-bottom: 1rem;
+    }
+
+    /* Adjust contact form for mobile */
+    .contact-content {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* Adjust footer for mobile */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+        justify-content: center;
     }
 }
 
@@ -548,6 +609,7 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--primary-color);
+    padding: 0.5rem;
 }
 
 /* Responsive Design */

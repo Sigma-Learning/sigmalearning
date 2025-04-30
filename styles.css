@@ -29,109 +29,43 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-}
-
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.logo span {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
+/* Mobile menu styles */
 .nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: none; /* Hide the menu by default */
+    flex-direction: column; /* Stack menu items vertically */
+    position: absolute; /* Position the menu relative to the navbar */
+    top: 100%; /* Place it just below the navbar */
+    left: 0;
+    width: 100%; /* Full width for mobile */
+    background-color: #fff; /* Background color for the menu */
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    padding: 1rem 0; /* Add some padding for spacing */
 }
 
-.nav-links li {
-    margin-left: 2rem;
+.nav-links.active {
+    display: flex; /* Show the menu when active */
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    cursor: pointer;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
+.menu-toggle i {
+    font-size: 1.5rem; /* Adjust icon size */
 }
 
-.donate-btn {
-    background-color: var(--primary-color);
-    color: var(--white) !important;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.donate-btn:hover {
-    background-color: var(--accent-color);
-    color: var(--white) !important;
-}
-
-/* Responsive Navigation */
+/* Show the toggle button and menu for smaller screens */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0.5rem 1rem;
+    .menu-toggle {
+        display: block; /* Show the toggle button */
     }
 
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background-color: var(--white);
-        padding: 0.5rem 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none; /* Hide the menu by default */
     }
-
-    .nav-links.active {
-        display: block;
-    }
-
-    .nav-links li {
-        margin: 0;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links li:last-child {
-        border-bottom: none;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 0.5rem 0;
-        font-size: 1rem;
-    }
+}
 
     .donate-btn {
         display: inline-block;
@@ -182,7 +116,7 @@ body {
         margin-top: 1rem;
         justify-content: center;
     }
-}
+
 
 /* Hero Section */
 .hero {

@@ -1,11 +1,11 @@
 /* Color Variables */
 :root {
-    --primary-color: #FF0000; /* Bright red */
-    --secondary-color: #FF3333; /* Lighter red */
-    --accent-color: #FF6666; /* Even lighter red */
-    --text-color: #000000; /* Black */
-    --light-bg: #FFF8DC; /* Light yellow background */
+    --primary-color: #1a237e; /* Indigo 900 */
+    --secondary-color: #fdd835; /* Yellow 600 */
+    --background-color: #f9f9f9; /* Light Gray */
+    --text-color: #333333; /* Dark Gray */
     --white: #ffffff;
+    --accent-color: #3949ab; /* Indigo 700 */
 }
 
 /* Reset and Base Styles */
@@ -35,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -74,26 +74,26 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: var(--primary-color);
 }
 
 .donate-btn {
-    background-color: #007bff;
-    color: white !important;
+    background-color: var(--primary-color);
+    color: var(--white) !important;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .donate-btn:hover {
-    background-color: #0056b3;
-    color: white !important;
+    background-color: var(--accent-color);
+    color: var(--white) !important;
 }
 
 /* Responsive Navigation */
@@ -125,7 +125,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--white);
     padding: 120px 0 60px;
     text-align: center;
@@ -185,8 +185,8 @@ body {
 }
 
 .cta-button:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
+    background-color: var(--white);
+    color: var(--primary-color);
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -194,7 +194,7 @@ body {
 /* Quick Links Section */
 .quick-links {
     padding: 4rem 0;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
 }
 
 .link-cards {
@@ -205,12 +205,12 @@ body {
 }
 
 .link-card {
-    background: white;
+    background: var(--white);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
@@ -221,7 +221,7 @@ body {
 
 .link-card i {
     font-size: 2.5rem;
-    color: #3498db;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -232,13 +232,13 @@ body {
 /* About Section */
 .about {
     padding: 4rem 0;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
 }
 
 .about h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #2c3e50;
+    color: var(--primary-color);
     font-size: 2.5rem;
 }
 
@@ -327,17 +327,14 @@ body {
 
 .program-card {
     background: var(--white);
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .program-card:hover {
     transform: translateY(-5px);
-    border-color: var(--accent-color);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .program-icon {
@@ -346,11 +343,8 @@ body {
 }
 
 .program-icon i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-    background: rgba(178, 34, 34, 0.1);
-    padding: 1.5rem;
-    border-radius: 50%;
 }
 
 .program-content {
@@ -361,7 +355,6 @@ body {
 
 .program-content h3 {
     color: var(--primary-color);
-    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -372,7 +365,7 @@ body {
 }
 
 .program-info {
-    background: var(--light-bg);
+    background: var(--background-color);
     padding: 1rem;
     border-radius: 5px;
     margin: 1.5rem 0;
@@ -417,7 +410,7 @@ body {
 .footer {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 4rem 0 2rem;
+    padding: 3rem 0 1rem;
 }
 
 .footer-content {
@@ -442,7 +435,7 @@ body {
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 .footer-bottom {
@@ -454,7 +447,7 @@ body {
 
 /* Programs Page Styles */
 .programs-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--white);
     padding: 120px 0 60px;
     text-align: center;
@@ -501,7 +494,7 @@ body {
 }
 
 .program-section:nth-child(even) {
-    background-color: var(--light-bg);
+    background-color: var(--background-color);
 }
 
 /* Contact Form Styles */
@@ -619,7 +612,7 @@ body {
 /* Join Our Classes Section */
 .join-classes {
     padding: 4rem 0;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
 }
 
 .join-classes .container {
@@ -748,7 +741,7 @@ ul {
 }
 
 .program-section .program-info {
-    background: var(--light-bg);
+    background: var(--background-color);
     padding: 1rem;
     border-radius: 5px;
     margin: 1.5rem 0;
@@ -775,7 +768,7 @@ ul {
 /* Home Page Programs Section */
 .programs {
     padding: 5rem 0;
-    background-color: var(--light-bg);
+    background-color: var(--background-color);
 }
 
 .programs .section-header {
@@ -804,18 +797,14 @@ ul {
 
 .program-card {
     background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .program-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .program-icon {
@@ -824,11 +813,8 @@ ul {
 }
 
 .program-icon i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-    background: rgba(178, 34, 34, 0.1);
-    padding: 1.5rem;
-    border-radius: 50%;
 }
 
 .program-content {
@@ -839,7 +825,6 @@ ul {
 
 .program-content h3 {
     color: var(--primary-color);
-    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -850,7 +835,7 @@ ul {
 }
 
 .program-info {
-    background: var(--light-bg);
+    background: var(--background-color);
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -896,7 +881,7 @@ ul {
 
 /* About Page Styles */
 .about-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--white);
     padding: 100px 0 60px;
     text-align: center;
@@ -931,13 +916,13 @@ ul {
 
 .mission {
     padding: 80px 0;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
 }
 
 .mission h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #2c3e50;
+    color: var(--primary-color);
 }
 
 .mission p {
@@ -945,7 +930,7 @@ ul {
     margin: 0 auto;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #34495e;
+    color: var(--text-color);
 }
 
 .team {
@@ -955,7 +940,7 @@ ul {
 .team h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: var(--primary-color);
 }
 
 .team-members {
@@ -985,7 +970,7 @@ ul {
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #3498db;
+    border: 4px solid var(--accent-color);
 }
 
 .member-image img {
@@ -995,18 +980,18 @@ ul {
 }
 
 .team-member h3 {
-    color: #2c3e50;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
 .team-member .role {
-    color: #3498db;
+    color: var(--accent-color);
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .team-member p {
-    color: #34495e;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -1039,7 +1024,7 @@ ul {
 }
 
 .footer-links a:hover {
-    color: var(--accent-color); /* Add hover effect */
+    color: var(--secondary-color); /* Add hover effect */
 }
 
 
@@ -1079,7 +1064,7 @@ ul {
 
 /* Highlight Section for About Us */
 .team-highlight {
-    background-color: var(--light-bg);
+    background-color: var(--background-color);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1089,7 +1074,7 @@ ul {
 /* Join Class Section */
 .join-class {
     padding: 4rem 0;
-    background-color: var(--light-bg);
+    background-color: var(--background-color);
 }
 
 .join-class .section-header {
@@ -1191,5 +1176,5 @@ ul {
 }
 
 .footer-links a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }

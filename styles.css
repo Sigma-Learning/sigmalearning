@@ -31,16 +31,14 @@ body {
 
 /* Mobile menu styles */
 .nav-links {
-    display: none; /* Hide the menu by default */
-    flex-direction: column; /* Stack menu items vertically */
-    position: absolute; /* Position the menu relative to the navbar */
-    top: 100%; /* Place it just below the navbar */
-    left: 0;
-    width: 100%; /* Full width for mobile */
-    background-color: #fff; /* Background color for the menu */
-    z-index: 1000; /* Ensure it appears above other content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-    padding: 1rem 0; /* Add some padding for spacing */
+    display: flex; /* Ensure the menu is visible on desktop */
+    flex-direction: row; /* Align items horizontally */
+    position: static; /* Reset position for desktop */
+    background-color: transparent; /* No background for desktop */
+    box-shadow: none; /* Remove shadow for desktop */
+    padding: 0; /* Reset padding for desktop */
+    width: auto; /* Reset width for desktop */
+    z-index: auto; /* Reset z-index for desktop */
 }
 
 .nav-links.active {
@@ -48,8 +46,7 @@ body {
 }
 
 .menu-toggle {
-    display: none; /* Hide the toggle button by default */
-    cursor: pointer;
+    display: none; /* Hide the toggle button on desktop */
 }
 
 .menu-toggle i {
@@ -59,13 +56,29 @@ body {
 /* Show the toggle button and menu for smaller screens */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show the toggle button */
+        display: block; /* Show the toggle button on mobile */
+        cursor: pointer;
     }
 
     .nav-links {
-        display: none; /* Hide the menu by default */
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position the menu for mobile */
+        top: 100%; /* Place it below the navbar */
+        left: 0;
+        width: 100%; /* Full width for mobile */
+        background-color: #fff; /* Add background for mobile */
+        z-index: 1000; /* Ensure it appears above other content */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for mobile */
+        padding: 1rem 0; /* Add padding for spacing */
     }
+    .nav-links.active {
+        display: flex; /* Show the menu when active */
+    }
+
+
 }
+
 
     .donate-btn {
         display: inline-block;

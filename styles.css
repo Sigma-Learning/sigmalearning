@@ -819,17 +819,16 @@ ul {
 }
 
 .program-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    gap: 2rem; /* Add spacing between cards */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 1rem 0; /* Add padding for spacing */
 }
 
 .program-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+    width: 300px; /* Set a fixed width for each card */
 }
 
 .program-card:hover {
@@ -1238,4 +1237,30 @@ ul {
 
 .fab.fa-whatsapp {
     color: #25D366;
+}
+
+
+/* Mobile Sign-Up Button */
+.mobile-signup-btn {
+    display: none; /* Hide by default */
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-signup-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Show the button only on mobile devices */
+@media (max-width: 768px) {
+    .mobile-signup-btn {
+        display: inline-block; /* Show on mobile */
+    }
 }

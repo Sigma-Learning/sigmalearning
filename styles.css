@@ -14,6 +14,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Adjust logo size */
 .logo img {
     max-height: 60px; /* Adjust the height to your preference */
     width: auto; /* Maintain aspect ratio */
@@ -48,43 +49,47 @@ body {
     font-weight: 500; /* Adjust font weight */
 }
 
+/* Hide the menu by default on mobile */
 .nav-links.active {
     display: flex; /* Show the menu when active */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position the menu for mobile */
+    top: 100%; /* Place it below the navbar */
+    left: 0;
+    width: 100%; /* Full width for mobile */
+    background-color: #fff; /* Add background for mobile */
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for mobile */
+    padding: 1rem 0; /* Add padding for spacing */
 }
 
 .menu-toggle {
     display: none; /* Hide the toggle button on desktop */
 }
 
-.menu-toggle i {
-    font-size: 1.5rem; /* Adjust icon size */
+.menu-toggle {
+    display: none; /* Hide by default */
+    cursor: pointer;
 }
 
 /* Show the toggle button and menu for smaller screens */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block; /* Show the toggle button on mobile */
-        cursor: pointer;
     }
 
+
     .nav-links {
-        display: none; /* Hide the menu by default on mobile */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute; /* Position the menu for mobile */
-        top: 100%; /* Place it below the navbar */
-        left: 0;
-        width: 100%; /* Full width for mobile */
-        background-color: #fff; /* Add background for mobile */
-        z-index: 1000; /* Ensure it appears above other content */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for mobile */
-        padding: 1rem 0; /* Add padding for spacing */
+        display: none; /* Hide the menu by default */
     }
+    
     .nav-links.active {
         display: flex; /* Show the menu when active */
     }
-
-
 }
+
+
+
 
 
     .donate-btn {

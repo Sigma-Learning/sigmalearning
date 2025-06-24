@@ -1270,3 +1270,167 @@ ul {
         display: inline-block; /* Show on mobile */
     }
 }
+
+/* Ongoing Programs Section */
+.ongoing-programs {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.future-builders {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--background-color);
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-overview {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.program-overview .program-icon {
+    margin-bottom: 1.5rem;
+}
+
+.program-overview .program-icon i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    background: rgba(26, 35, 126, 0.1);
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+.program-overview h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.program-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.workshops-section {
+    margin-bottom: 3rem;
+}
+
+.workshops-section h4 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.workshop-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.workshop-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.workshop-item:hover {
+    transform: translateY(-2px);
+}
+
+.workshop-item i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    width: 30px;
+    text-align: center;
+}
+
+.workshop-item span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.workshop-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.get-involved {
+    text-align: center;
+}
+
+.get-involved h4 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.involvement-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.involvement-options .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.email-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.email-note i {
+    color: var(--primary-color);
+}
+
+/* Mobile Responsive for Ongoing Programs */
+@media (max-width: 768px) {
+    .future-builders {
+        padding: 2rem 1rem;
+        margin: 0 1rem;
+    }
+
+    .program-overview h3 {
+        font-size: 2rem;
+    }
+
+    .program-description {
+        font-size: 1rem;
+    }
+
+    .workshop-list {
+        grid-template-columns: 1fr;
+    }
+
+    .workshop-item {
+        padding: 0.8rem;
+    }
+
+    .involvement-options .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
